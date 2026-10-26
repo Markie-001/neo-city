@@ -34,15 +34,8 @@ async function loadWeather() {
                 speed.innerHTML = `${Math.round(weatherInfo.wind.speed)} m/s`;
                 tempMin.innerHTML = `${Math.round(weatherInfo.main.temp_min)}°C`;
                 tempMax.innerHTML = `${Math.round(weatherInfo.main.temp_max)}°C`;
-
         } catch(error) {
-                document.getElementById('city').textContent = 'City not found'
-                document.getElementById('temp').textContent = '...'
-                document.getElementById('main').textContent = '...'
-                document.getElementById('deg').textContent = '...'
-                document.getElementById('speed').textContent = '...'
-                document.getElementById('tempMin').textContent = '...'
-                document.getElementById('tempMax').textContent = '...'
+                console.log(error);
         }
 }
 
