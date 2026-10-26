@@ -7,7 +7,49 @@
     <title>neocity</title>
   </head>
   <body>
-    <div id="app"></div>
+    <canvas id="my-canvas"></canvas>
+
+    <div id="weather-container">
+        <div id="info">
+            <h3 id="city" class="cities"></h3>
+            <h3 id="date" class="cities"></h3>
+        </div>
+
+        <div id="iconTemp"></div>
+
+        <div id="temp-info">
+            <div>
+                <h3>Temp</h3>
+                <h3 id="temp" class="changeSize"></h3>
+            </div>
+            <div>
+                <h3>Main</h3>
+                <h3 id="main" class="changeSize"></h3>
+            </div>
+        </div>
+
+        <div id="wind">
+            <div>
+                <h3>Deg</h3>
+                <h3 id="deg" class="changeSize"></h3>
+            </div>
+            <div>
+                <h3>Speed</h3>
+                <h3 id="speed" class="changeSize"></h3>
+            </div>
+        </div>
+
+        <div id="min-max">
+            <div>
+                <h3>Min</h3>
+                <h3 id="tempMin" class="changeSize"></h3>
+            </div>
+            <div>
+                <h3>Max</h3>
+                <h3 id="tempMax" class="changeSize"></h3>
+            </div>
+        </div>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
