@@ -61,6 +61,12 @@ new GLTFLoader().load('public/models/neo-city.glb', function (gltf) {
   model.rotation.y = -Math.PI / 2.3;
   model.position.y = -0.6;
   model.position.z = 1;
+  controls.minAzimuthAngle = -Math.PI / 4;
+  controls.maxAzimuthAngle =  Math.PI / 4;
+  controls.minPolarAngle = Math.PI / 3;
+  controls.maxPolarAngle = Math.PI / 2;
+  controls.minDistance = Math.PI * 5;
+  controls.maxDistance = Math.PI * 10;
   model.updateMatrixWorld(true);
   const center = new THREE.Box3().setFromObject(model).getCenter(new THREE.Vector3());
   controls.target.copy(center);
