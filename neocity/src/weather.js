@@ -18,21 +18,10 @@ date.innerHTML = `${day} ${month}, ${year}`;
 
 async function loadWeather() {
         try {
-                const cityName = document.getElementById('searchInput').value;
-
-                const weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=bf37ba0fb84c731478ed6fe7105a874a&units=metric`);
+                const weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Rotterdam&appid=bf37ba0fb84c731478ed6fe7105a874a&units=metric`);
                 
                 const weatherInfo = await weather.json();
                 console.log(weatherInfo)
-
-                document.getElementById('city').textContent = 'Searching city'
-                document.getElementById('temp').textContent = '...'
-                document.getElementById('main').textContent = '...'
-                document.getElementById('deg').textContent = '...'
-                document.getElementById('speed').textContent = '...'
-                document.getElementById('tempMin').textContent = '...'
-                document.getElementById('tempMax').textContent = '...'
-                await weatherAwait(10);
 
                 city.innerHTML = `${weatherInfo.name}`;
                 temp.innerHTML = `${Math.round(weatherInfo.main.temp)}°C`;

@@ -62,13 +62,6 @@ new GLTFLoader().load('public/models/neo-city.glb', function (gltf) {
   model.updateMatrixWorld(true);
 
   stick(new CSS3DObject(createWeatherScreen()), model.getObjectByName('Cube003'), 280, 240, 0);
-
-  addEventListener('click', function (e) {
-  const mouse = new THREE.Vector2(e.clientX / innerWidth * 2 - 1, -(e.clientY / innerHeight) * 2 + 1);
-  const ray = new THREE.Raycaster();
-  ray.setFromCamera(mouse, camera);
-  console.log(ray.intersectObject(model, true)[0]?.object.name);
-});
 });
 
 // Draw everything
