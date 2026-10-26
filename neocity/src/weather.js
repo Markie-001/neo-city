@@ -19,11 +19,10 @@ date.innerHTML = `${day} ${month}, ${year}`;
 const cities = [
     'Rotterdam', 'Amsterdam', 'Tokyo', 'Paris', 'London', 
     'Sydney', 'Cairo', 'Manila', 'New York', 'Berlin', 
-    'Beijing', 'Singapore', 'Toronto', 'Dubai', 
-    'Buenos Aires', 'Rome', 'Seoul', 'Mexico City', 'Madrid', 
+    'Beijing', 'Singapore', 'Toronto', 'Dubai', 'Rome', 'Seoul', 'Mexico City', 'Madrid', 
     'Bangkok', 'Istanbul', 'Los Angeles', 'Mumbai', 'Cape Town', 
     'Vienna', 'Hong Kong', 'Rio de Janeiro', 'Melbourne', 'Chicago', 
-    'Zurich', 'Jakarta', 'Vancouver', 'Nairobi', 'Barcelona', 'Manila'
+    'Zurich', 'Jakarta', 'Vancouver', 'Barcelona', 'Manila', 'Kyoto'
 ];
 const randomCity = cities[Math.floor(Math.random() * cities.length)];
 
