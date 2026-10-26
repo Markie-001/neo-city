@@ -10,8 +10,8 @@ const canvas = document.querySelector('#my-canvas');
 // Scene
 const scene = new THREE.Scene();
 // Camera
-const camera = new THREE.PerspectiveCamera(75, innerWidth / innerHeight, 0.1, 1000);
-camera.position.set(0, -0.6, 3);
+const camera = new THREE.PerspectiveCamera(100, innerWidth / innerHeight, 0.1, 1000);
+camera.position.set(-2, 20, 20);
 // Renderer
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
 renderer.setSize(innerWidth, innerHeight);
@@ -32,7 +32,7 @@ document.body.appendChild(cssRenderer.domElement);
 
 // Orbit controls
 const controls = new OrbitControls(camera, cssRenderer.domElement);
-controls.target.set(0, -0.5, 0);
+controls.target.set(1, -0.5, 0);
 
 // HTML screens: Pokemon img & name, stats and description
 function stick(sticker, part, width, height, tilt, moveX = 0, moveY = 0) {
@@ -58,7 +58,8 @@ new GLTFLoader().load('public/models/neo-city.glb', function (gltf) {
   const model = gltf.scene;
   scene.add(model);
   model.rotation.y = -Math.PI / 2.3;
-  model.position.y = -0.6; 
+  model.position.y = -0.6;
+  model.position.z = 1;
   model.updateMatrixWorld(true);
 
   stick(new CSS3DObject(createWeatherScreen()), model.getObjectByName('Cube003'), 280, 240, 0);

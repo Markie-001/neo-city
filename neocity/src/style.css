@@ -1,62 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 #weather-container {
     position: relative;
-    width: 415px;
-    height: 420px;
+    width: 380px;
+    height: 242px;
     display: block;
     text-align: center;
     padding: 40px 0px;
     overflow: hidden;
-    border-radius: 45px;
-    background-image: linear-gradient(180deg,
-    lightblue, rgb(45, 90, 207)
-    );
-    color: white;
-}
-
-#searchBar {
-    display: flex;
-    padding: 0 40px;
-    margin-bottom: 30px;
-}
-
-#searchInput {
-    background-color: none;
-    border: none;
-    outline: none;
-    width: 90%;
-    background: transparent;
-    color: white ;
-    border-bottom: solid 1px lightblue;
-    font-size: 1.5rem;
-}
-
-#searchIcon {
-    border: none;
-    background: transparent;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
+    background-color: #013040;
+    color: #56f4c0;
+    font-size: 20px;
 }
 
 .cities {
-    font-size: 1.5rem;
+    font-size: 20px;
 }
 
 #info {
-    position: absolute;
+    position: relative;
     width: 100%;
     display: flex;
     justify-self: center;
     justify-content: space-evenly;
+    bottom: 30px;
 }
 
 #iconTemp {
-    position: absolute;
+  position: relative;
     width: 100%;
     display: flex;
     justify-self: center;
     justify-content: space-around;
-    bottom: 12.6rem;
+    bottom: 3.5rem;
 }
 
 #temp-info {
@@ -65,9 +45,21 @@
     display: flex;
     justify-self: center;
     justify-content: space-around;
-    bottom: 10rem;
+    bottom: 3.5rem;
     padding-bottom: 1.2rem; 
-    border-bottom: solid 1px lightblue;
+    border-bottom: solid 1px #56f4c0;
+}
+
+#temp-info h3 {
+  font-size: 12px;
+}
+
+#wind h3 {
+  font-size: 12px;
+}
+
+#min-max h3 {
+  font-size: 12px;
 }
 
 #wind {
@@ -76,9 +68,9 @@
     display: flex;
     justify-self: center;
     justify-content: space-around;
-    bottom: 5rem;
+    bottom: 7.5rem;
     padding-bottom: 1.2rem; 
-    border-bottom: solid 1px lightblue;
+    border-bottom: solid 1px #56f4c0;
 }
 
 #min-max {
@@ -89,8 +81,4 @@
     justify-self: center;
     justify-content: space-around;
     padding-bottom: 1rem;
-}
-
-.changeSize {
-    font-size: 0.9rem;
 }
