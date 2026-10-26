@@ -16,9 +16,12 @@ let year = dateNow.getUTCFullYear();
 
 date.innerHTML = `${day} ${month}, ${year}`;
 
+const cities = ['Rotterdam', 'Amsterdam', 'Tokyo', 'Paris', 'London', 'Sydney', 'Cairo', 'Manila', 'New York'];
+const randomCity = cities[Math.floor(Math.random() * cities.length)];
+
 async function loadWeather() {
         try {
-                const weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Rotterdam&appid=bf37ba0fb84c731478ed6fe7105a874a&units=metric`);
+                const weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${randomCity}&appid=bf37ba0fb84c731478ed6fe7105a874a&units=metric`);
                 
                 const weatherInfo = await weather.json();
                 console.log(weatherInfo)
