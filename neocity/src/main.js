@@ -62,6 +62,9 @@ new GLTFLoader().load('public/models/neo-city.glb', function (gltf) {
   model.position.y = -0.6;
   model.position.z = 1;
   model.updateMatrixWorld(true);
+  const center = new THREE.Box3().setFromObject(model).getCenter(new THREE.Vector3());
+  controls.target.copy(center);
+  controls.update();
 
   stick(new CSS3DObject(createWeatherScreen()), model.getObjectByName('Cube003'), 280, 240, 0);
 });
