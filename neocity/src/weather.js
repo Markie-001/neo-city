@@ -26,6 +26,14 @@ const cities = [
 ];
 const randomCity = cities[Math.floor(Math.random() * cities.length)];
 
+function waitWeather(x) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(x);
+    }, 2500);
+  });
+}
+
 async function loadWeather() {
         try {
                 const weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${randomCity}&appid=bf37ba0fb84c731478ed6fe7105a874a&units=metric`);
