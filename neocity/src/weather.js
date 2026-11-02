@@ -41,6 +41,8 @@ async function loadWeather() {
                 const weatherInfo = await weather.json();
                 console.log(weatherInfo)
 
+                await waitWeather(10);
+
                 city.innerHTML = `${weatherInfo.name}`;
                 temp.innerHTML = `${Math.round(weatherInfo.main.temp)}°C`;
                 iconTemp.innerHTML = `<img src="http://openweathermap.org/img/wn/${weatherInfo.weather[0].icon}@2x.png" />`;
