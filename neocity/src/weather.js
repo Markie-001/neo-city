@@ -41,6 +41,13 @@ async function loadWeather() {
                 const weatherInfo = await weather.json();
                 console.log(weatherInfo)
 
+                document.getElementById('city').textContent = 'Searching city'
+                document.getElementById('temp').textContent = '...'
+                document.getElementById('main').textContent = '...'
+                document.getElementById('deg').textContent = '...'
+                document.getElementById('speed').textContent = '...'
+                document.getElementById('tempMin').textContent = '...'
+                document.getElementById('tempMax').textContent = '...'
                 await waitWeather(10);
 
                 city.innerHTML = `${weatherInfo.name}`;
